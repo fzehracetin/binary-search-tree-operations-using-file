@@ -305,7 +305,8 @@ void printInOrder(node* myusers)
 
 void treeTraversal(node* myusers, int* size) 
 {
-    if (myusers != NULL) {
+    if (myusers != NULL) 
+    {
         treeTraversal(myusers->left, size);
         treeTraversal(myusers->right, size);
         *size= *size + 1;
@@ -331,7 +332,8 @@ void printNext(node* myusers, int id)
 
 void printGreater (node* myusers, int id) 
 {
-    if (myusers != NULL) {
+    if (myusers != NULL) 
+    {
         printGreater(myusers->left, id);
         if (id < myusers->id) 
 	{ 
@@ -348,12 +350,13 @@ int main(int argc, char **argv)
     int id, fonk, out = 1; 
     f1 = fopen("Input.txt", "r");
     
-    if (f1 == NULL) {
+    if (f1 == NULL) 
+    {
         printf("File could not opened\n");
     }
     
    do
-    {
+   {
         system("cls");
         printf("_________BINARY SEARCH TREE OPERATIONS__________ \n");
         printf("1 - insertNewUser() \n");
@@ -369,14 +372,17 @@ int main(int argc, char **argv)
         out = 1; 
         scanf("%d", &fonk);
         system("cls");
-        switch(fonk) {
+        switch(fonk) 
+	{
             case 1: 
-                do {
+                do 
+		{
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - insertNewUser() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
@@ -385,15 +391,18 @@ int main(int argc, char **argv)
                             insertNewUser(id, f1);
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 2:
-                do {
+                do 
+		{
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - deleteUser() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
@@ -403,15 +412,18 @@ int main(int argc, char **argv)
                             printf("Kullanici silindi. \n");
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 3:
-                 do {
+                 do 
+		 {
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - contains() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
@@ -420,15 +432,18 @@ int main(int argc, char **argv)
                             contains(id);
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 4:
-                do {
+                do 
+		{
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - friends() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
@@ -437,30 +452,36 @@ int main(int argc, char **argv)
                             friends(id);
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 5:
-                 do {
+                 do 
+		 {
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - size() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out)
+		    {
                         case 0:
                             break;
                         case 1:
                             size();
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 6:
-                do {
+                do 
+		{
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - printNext() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
@@ -469,15 +490,18 @@ int main(int argc, char **argv)
                             printNext(users, id);
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 7:
-                do {
+                do 
+		{
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - printGreater() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
@@ -486,22 +510,26 @@ int main(int argc, char **argv)
                             printGreater(users, id);
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 8:
-                do {
+                do 
+		{
                     printf(" 0 - EXIT from function \n");
                     printf(" 1 - printInOrder() \n");
                     printf("Select the operation : ");
                     scanf("%d", &out);
-                    switch(out) {
+                    switch(out) 
+		    {
                         case 0:
                             break;
                         case 1:
                             printInOrder(users);
                             break;
                     }
-                } while (out != 0);
+                } 
+		while (out != 0);
                 break;
             case 9:
                 printf("Program shutting down. . . \n");
@@ -511,6 +539,7 @@ int main(int argc, char **argv)
                 printf("Wrong input! \n");
                 break;
         }
-    } while (fonk != 9);
-	return 0;
+    } 
+    while (fonk != 9);
+return 0;
 }
