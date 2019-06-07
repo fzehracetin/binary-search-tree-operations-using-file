@@ -6,7 +6,10 @@ Tree is gonna built from [Input.txt](https://github.com/fzehracetin/binary-searc
 
 #### Line Example: 
 31,Ayse Terim,9-15-53-60
+
 id, name surname, id-id-id-id
+
+## Functions : 
 
 Functions in the program listed below:
 
